@@ -3,6 +3,7 @@ import HomeButton from "../component/HomeButton";
 
 const Beranda = () => {
   return (
+    <>
     <main className="bg-stone-950 min-h-screen text-white w-full">
       <section className="py-12 px-4 md:px-8 w-full">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
@@ -91,6 +92,7 @@ const Beranda = () => {
       </section>
 
     </main>
+    </>
   );
 };
 
