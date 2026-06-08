@@ -24,6 +24,27 @@ const Keranjang = () => {
 
       </nav>
 
+  <section class="flex flex-col items-center justify-center text-center py-16">
+
+    <div class="w-64 h-64 rounded-full bg-[#0f0f0f] border border-gray-800 flex items-center justify-center shadow-lg">
+      <span class="text-8xl">🛒</span>
+    </div>
+
+    <h1 class="mt-12 text-6xl font-bold">
+      Keranjang Belanja Anda Kosong
+    </h1>
+
+    <p class="mt-5 text-2xl text-gray-300">
+      Yuk pilih parfum premium favoritmu di Velora
+    </p>
+
+    <a
+      href="index.html"
+      class="mt-14 bg-yellow-500 text-black font-bold text-3xl px-16 py-6 rounded-3xl hover:bg-yellow-400 transition">
+      Belanja Sekarang
+    </a>
+
+  </section>
     </div>
   );
 };
