@@ -84,7 +84,7 @@ const Login = () => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               className="w-full bg-black/40 border border-stone-800 focus:border-amber-400 rounded-xl px-4 py-3 text-white placeholder-stone-600 focus:outline-none focus:ring-1 focus:ring-amber-400/50 transition-all text-sm"
-              placeholder="admin@velora.com"
+              placeholder="Masukan Email Anda"
             />
           </div>
 
@@ -96,7 +96,7 @@ const Login = () => {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               className="w-full bg-black/40 border border-stone-800 focus:border-amber-400 rounded-xl px-4 py-3 text-white placeholder-stone-600 focus:outline-none focus:ring-1 focus:ring-amber-400/50 transition-all text-sm"
-              placeholder="••••••••"
+              placeholder="Masukan Password Anda"
             />
           </div>
 

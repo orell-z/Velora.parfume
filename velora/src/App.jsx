@@ -1,18 +1,18 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate, Outlet } from 'react-router-dom';
-import Login from './pages/login'; // Huruf kecil sesuai nama file 'login.jsx' kamu
+import Login from './pages/login'; // pastikan huruf kecil 'login' sesuai nama filemu
 import Beranda from './pages/Beranda';
 import Produk from './pages/Produk';
 import Keranjang from './pages/Keranjang';
 import Header from './component/Header';
 
-// Pelindung Rute Internal: Hanya bisa diakses jika sudah login
+// 1. Pelindung halaman internal (Hanya bisa diakses jika sudah login)
 const ProtectedRoute = () => {
   const isAuthenticated = localStorage.getItem('velora_token') === 'true';
   return isAuthenticated ? <Outlet /> : <Navigate to="/" replace />;
 };
 
-// Tata Letak Aplikasi Internal (Dengan Header Bawaan)
+// 2. Layout Bersama yang membungkus Header/Navbar
 const MainLayout = () => {
   return (
     <div className="min-h-screen flex flex-col justify-between">
@@ -28,10 +28,10 @@ function App() {
   return (
     <Router>
       <Routes>
-        {/* Rute Login Utama (Selalu bisa diakses berkali-kali tanpa dialihkan paksa) */}
+        {/* Rute Utama: Menampilkan Halaman Login */}
         <Route path="/" element={<Login />} />
 
-        {/* Rute Terproteksi (Butuh Login) */}
+        {/* Rute Terproteksi: Harus Login dulu baru bisa diakses */}
         <Route element={<ProtectedRoute />}>
           <Route element={<MainLayout />}>
             <Route path="/beranda" element={<Beranda />} />
@@ -40,7 +40,7 @@ function App() {
           </Route>
         </Route>
 
-        {/* Antisipasi jika mengetik rute asal-asalan */}
+        {/* Jika user mengetik rute ngawur, otomatis diarahkan kembali ke Login */}
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </Router>

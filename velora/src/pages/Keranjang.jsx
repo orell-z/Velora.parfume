@@ -4,11 +4,7 @@ const Keranjang = () => {
 
       <nav className="flex items-center justify-between px-10 py-6 border-b border-gray-800">
 
-        <div className="flex items-center gap-8">
-          <h1 className="text-7xl font-bold text-yellow-500">
-            Velora
-          </h1>
-        </div>
+
 
         <div className="flex w-[70%]">
           <input
@@ -37,7 +33,7 @@ const Keranjang = () => {
     <p class="mt-5 text-2xl text-gray-300">
       Yuk pilih parfum premium favoritmu di Velora
     </p>
-
+    
     <a
       href="index.html"
       class="mt-14 bg-yellow-500 text-black font-bold text-3xl px-16 py-6 rounded-3xl hover:bg-yellow-400 transition">
