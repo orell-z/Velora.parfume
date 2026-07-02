@@ -1,8 +1,10 @@
 import React from "react";
-import Cardberanda from "../component/card_beranda";
+import { useNavigate } from "react-router-dom";
+import Cards from "../component/cards";
 import HomeButton from "../component/HomeButton";
 
 const Beranda = () => {
+  const navigate = useNavigate();
   return (
     <>
     <main className="bg-stone-950 min-h-screen text-white w-full">
@@ -32,7 +34,7 @@ const Beranda = () => {
         </div>
       </section>
 
-      <Cardberanda />
+      <Cards />
       
     </main>
     </>
